@@ -219,13 +219,20 @@ a {
   color: var(--green)
 }
 
+.eyebrow{
+  background: rgba(216, 58, 50, .08);
+  padding : 6px 10px;
+  border-radius: 20px;
+  border: var(--red) solid 1px;
+}
+  
 .hero-copy h1,
 .section-heading h2,
 .about-copy h2,
 .booking-copy h2,
 .faq-grid h2,
 .final-inner h2 {
-  font: 800 clamp(43px, 5vw, 75px)/1.02 Poppins, sans-serif;
+  font: 800 clamp(43px, 4.2vw, 75px)/1.02 Poppins, sans-serif;
   letter-spacing: -.055em;
   margin: 20px 0 22px
 }
@@ -282,10 +289,6 @@ a {
   color: var(--ink)
 }
 
-.light {
-  background: #fff;
-  color: var(--ink)
-}
 
 .full {
   width: 100%
@@ -598,6 +601,10 @@ a {
   flex-direction: column
 }
 
+.program-card:hover {
+  box-shadow: 0 18px 34px rgba(15, 23, 42, .08)
+}
+
 .program-card.featured {
   border-color: rgba(216, 58, 50, .35);
   box-shadow: 0 18px 34px rgba(216, 58, 50, .08)
@@ -712,7 +719,7 @@ a {
 
 .program-footer button {
   border: 0;
-  background: #111827;
+  background: var(--red);
   color: #fff;
   border-radius: 10px;
   padding: 9px 11px;

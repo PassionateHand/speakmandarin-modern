@@ -165,7 +165,7 @@ function App() {
             <button onClick={() => scrollTo('why')}>Why Mandarin</button>
             <button onClick={() => scrollTo('about')}>About</button>
             <button onClick={() => scrollTo('faq')}>FAQ</button>
-            <button className="nav-cta" onClick={() => scrollTo('booking')}>Book a Class <ArrowRight size={16}/></button>
+            <button className="nav-cta" onClick={() => scrollTo('booking')}>Book a Class <ArrowRight size={16} /></button>
           </nav>
           <button className="menu-btn" onClick={() => setMenuOpen(v => !v)} aria-label="Toggle navigation">
             {menuOpen ? <X /> : <Menu />}
@@ -179,12 +179,12 @@ function App() {
           <div className="hero-orb orb-2" />
           <div className="shell hero-grid">
             <div className="hero-copy">
-              <div className="eyebrow"><Sparkles size={15}/> Learn Mandarin. Connect with China. Go further.</div>
+              <div className="eyebrow"><Sparkles size={15} /> Learn Mandarin. Connect with China. Go further.</div>
               <h1>Learn Chinese with <span>confidence.</span></h1>
               <p className="hero-text">Structured Mandarin lessons for beginners, students, professionals, kids and travellers — taught online or in person in Abuja.</p>
               <div className="hero-actions">
-                <button className="btn primary" onClick={() => scrollTo('booking')}>Book a Consultation <ArrowRight size={18}/></button>
-                <button className="btn secondary" onClick={() => scrollTo('programs')}><Play size={17}/> Explore Programs</button>
+                <button className="btn primary" onClick={() => scrollTo('booking')}>Book a Consultation <ArrowRight size={18} /></button>
+                <button className="btn secondary" onClick={() => scrollTo('programs')}><Play size={17} /> Explore Programs</button>
               </div>
               <div className="hero-proof">
                 <div className="avatar-stack"><span>中</span><span>你</span><span>我</span><span>学</span></div>
@@ -194,13 +194,13 @@ function App() {
             <div className="hero-visual">
               <div className="hero-card glass">
                 <div className="hero-image-wrap">
-                  <video src={siteImages.hero} alt="Learn Mandarin with SpeakMandarinNG" autoPlay loop/>
-                  <div className="image-badge"><span className="live-dot"/> ONLINE + ONSITE</div>
+                  <video src={siteImages.hero} aria-label="Learn Mandarin with SpeakMandarinNG" autoPlay loop playsInline muted />
+                  <div className="image-badge"><span className="live-dot" /> ONLINE + ONSITE</div>
                 </div>
-                <div className="hero-floating hf-one"><div className="mini-icon"><ShieldCheck size={16}/></div><span><strong>Structured learning</strong><small>Beginner → Advanced</small></span></div>
-                <div className="hero-floating hf-two"><div className="mini-icon red"><Target size={16}/></div><span><strong>Speak, not memorize</strong><small>Communication-focused</small></span></div>
+                <div className="hero-floating hf-one"><div className="mini-icon"><ShieldCheck size={16} /></div><span><strong>Structured learning</strong><small>Beginner → Advanced</small></span></div>
+                <div className="hero-floating hf-two"><div className="mini-icon red"><Target size={16} /></div><span><strong>Speak, not memorize</strong><small>Communication-focused</small></span></div>
               </div>
-              <div className="chinese-stamp">学<br/><small>LEARN</small></div>
+              <div className="chinese-stamp">学<br /><small>LEARN</small></div>
             </div>
           </div>
         </section>
@@ -223,28 +223,28 @@ function App() {
             </div>
 
             <div className="mode-switch">
-              <button className={mode === 'online' ? 'active' : ''} onClick={() => setMode('online')}><Globe2 size={16}/> Online</button>
-              <button className={mode === 'physical' ? 'active' : ''} onClick={() => setMode('physical')}><MapPin size={16}/> Physical in Abuja</button>
+              <button className={mode === 'online' ? 'active' : ''} onClick={() => setMode('online')}><Globe2 size={16} /> Online</button>
+              <button className={mode === 'physical' ? 'active' : ''} onClick={() => setMode('physical')}><MapPin size={16} /> Physical in Abuja</button>
             </div>
 
             <div className="program-grid">
               {visiblePrograms.map((p) => (
                 <article className={p.featured ? 'program-card featured' : 'program-card'} key={p.title}>
-                  <div className="program-img"><img src={p.image} alt=""/><span>{p.level}</span></div>
+                  <div className="program-img"><img src={p.image} alt="" /><span>{p.level}</span></div>
                   <div className="program-body">
-                    <div className="program-top"><span><Clock3 size={14}/> {p.duration}</span><span>{p.audience}</span></div>
+                    <div className="program-top"><span><Clock3 size={14} /> {p.duration}</span><span>{p.audience}</span></div>
                     <h3>{p.title}</h3>
                     <p>{p.description}</p>
-                    <ul>{p.features.map(f => <li key={f}><Check size={15}/> {f}</li>)}</ul>
+                    <ul>{p.features.map(f => <li key={f}><Check size={15} /> {f}</li>)}</ul>
                     <div className="program-footer">
                       <div><small>{mode === 'online' ? 'Online' : 'Physical'} tuition</small><strong>{mode === 'online' ? p.online : p.physical}</strong></div>
-                      <button onClick={() => scrollTo('booking')}>Enrol <ArrowRight size={16}/></button>
+                      <button onClick={() => scrollTo('booking')}>Enrol <ArrowRight size={16} /></button>
                     </div>
                   </div>
                 </article>
               ))}
             </div>
-            <div className="center-btn"><button className="btn secondary" onClick={() => setShowAll(v => !v)}>{showAll ? 'Show fewer programs' : 'View all programs'} <ChevronDown size={18} className={showAll ? 'rotate' : ''}/></button></div>
+            <div className="center-btn"><button className="btn secondary" onClick={() => setShowAll(v => !v)}>{showAll ? 'Show fewer programs' : 'View all programs'} <ChevronDown size={18} className={showAll ? 'rotate' : ''} /></button></div>
           </div>
         </section>
 
@@ -256,8 +256,8 @@ function App() {
               <p>Whether your goal is education, business, travel, career growth or personal development, the learning path starts with where you are.</p>
             </div>
             <div className="audience-grid">
-              {audiences.map(({icon: Icon, title, text}) => (
-                <div className="audience-card" key={title}><div className="audience-icon"><Icon size={22}/></div><h3>{title}</h3><p>{text}</p><button onClick={() => scrollTo('programs')}>Find a program <ArrowRight size={15}/></button></div>
+              {audiences.map(({ icon: Icon, title, text }) => (
+                <div className="audience-card" key={title}><div className="audience-icon"><Icon size={22} /></div><h3>{title}</h3><p>{text}</p><button onClick={() => scrollTo('programs')}>Find a program <ArrowRight size={15} /></button></div>
               ))}
             </div>
           </div>
@@ -267,7 +267,7 @@ function App() {
           <div className="shell split-section">
             <div className="about-art">
               <div className="about-photo"><img src={siteImages.mandarin} alt="Mandarin learning illustration" /></div>
-              <div className="quote-card glass"><Quote size={22}/><strong>Speak confidently, not just memorize.</strong><span>Communication-focused learning</span></div>
+              <div className="quote-card glass"><Quote size={22} /><strong>Speak confidently, not just memorize.</strong><span>Communication-focused learning</span></div>
             </div>
             <div className="about-copy">
               <div className="eyebrow soft">Why SpeakMandarinNG?</div>
@@ -275,11 +275,11 @@ function App() {
               <p>SpeakMandarinNG is a Mandarin language academy offering online and on-site Chinese classes for children, teenagers and adults in Nigeria and internationally.</p>
               <p>The curriculum combines clear grammar progression, practical conversation and cultural immersion to build speaking confidence, listening skills and exam readiness.</p>
               <div className="check-list">
-                <div><Check size={17}/> Beginner to advanced pathways</div>
-                <div><Check size={17}/> HSK 1–6 exam preparation</div>
-                <div><Check size={17}/> Live online and in-person learning</div>
-                <div><Check size={17}/> Private and small-group options</div>
-                <div><Check size={17}/> Certificates of completion</div>
+                <div><Check size={17} /> Beginner to advanced pathways</div>
+                <div><Check size={17} /> HSK 1–6 exam preparation</div>
+                <div><Check size={17} /> Live online and in-person learning</div>
+                <div><Check size={17} /> Private and small-group options</div>
+                <div><Check size={17} /> Certificates of completion</div>
               </div>
               <div className="mission-grid"><div><small>MISSION</small><strong>Empowering Africans to learn Mandarin, connect with China and succeed globally.</strong></div><div><small>VISION</small><strong>To become Africa’s leading Mandarin language and cultural education platform.</strong></div></div>
             </div>
@@ -300,33 +300,162 @@ function App() {
 
         <section id="booking" className="section-pad booking-section">
           <div className="shell booking-wrap">
-            <div className="booking-copy"><div className="eyebrow">Start with a consultation</div><h2>Not sure where to start? <span>We’ll help you choose.</span></h2><p>Tell us your age, current level and goal. We’ll recommend the right Mandarin pathway — online or physical in Abuja.</p><div className="booking-points"><span><Check size={16}/> Level assessment</span><span><Check size={16}/> Personalised recommendation</span><span><Check size={16}/> Schedule options</span></div></div>
-            <form className="booking-card" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-row"><label>Name<input placeholder="Your name"/></label><label>Phone<input placeholder="+234…"/></label></div>
-              <label>Email<input type="email" placeholder="you@example.com"/></label>
-              <div className="form-row"><label>Learning goal<select><option>Beginner Mandarin</option><option>HSK Preparation</option><option>Business Mandarin</option><option>Mandarin for Kids</option><option>Travel Mandarin</option></select></label><label>Mode<select><option>Online</option><option>Physical in Abuja</option></select></label></div>
-              <label>Tell us a little about your goal<textarea rows="4" placeholder="What would you like to use Mandarin for?"></textarea></label>
-              <button className="btn primary full" type="submit">Request Consultation <ArrowRight size={18}/></button>
-              <small className="form-note">We’ll use your details only to respond to your enquiry.</small>
+            <div className="booking-copy"><div className="eyebrow">Start with a consultation</div><h2>Not sure where to start? <span>We’ll help you choose.</span></h2><p>Tell us your age, current level and goal. We’ll recommend the right Mandarin pathway — online or physical in Abuja.</p><div className="booking-points"><span><Check size={16} /> Level assessment</span><span><Check size={16} /> Personalised recommendation</span><span><Check size={16} /> Schedule options</span></div></div>
+            <form
+              className="booking-card"
+              action="https://formspree.io/f/xaenzvee"
+              method="POST"
+            >
+              {/* Email subject */}
+              <input
+                type="hidden"
+                name="_subject"
+                value="New SpeakMandarinNG Website Enquiry"
+              />
+
+              {/* Name + Phone */}
+              <div className="form-row">
+                <label>
+                  Full Name
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your full name"
+                    autoComplete="name"
+                    required
+                  />
+                </label>
+
+                <label>
+                  WhatsApp / Phone
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+234 ...."
+                    autoComplete="tel"
+                    required
+                  />
+                </label>
+              </div>
+
+              {/* Email */}
+              <label>
+                Email Address
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autoComplete="email"
+                  required
+                />
+              </label>
+
+              {/* Programme + Mode */}
+              <div className="form-row">
+                <label>
+                  What would you like to learn?
+                  <select name="course" required>
+                    <option value="">Select a programme</option>
+
+                    <option value="Mandarin Foundations">
+                      Mandarin Foundations
+                    </option>
+
+                    <option value="Elementary Mandarin">
+                      Elementary Mandarin
+                    </option>
+
+                    <option value="Intermediate Mandarin">
+                      Intermediate Mandarin
+                    </option>
+
+                    <option value="Advanced Mandarin">
+                      Advanced Mandarin
+                    </option>
+
+                    <option value="HSK Exam Preparation">
+                      HSK Exam Preparation
+                    </option>
+
+                    <option value="Business Mandarin">
+                      Business Mandarin
+                    </option>
+
+                    <option value="Mandarin for Kids & Teens">
+                      Mandarin for Kids & Teens
+                    </option>
+
+                    <option value="Practical & Travel Mandarin">
+                      Practical & Travel Mandarin
+                    </option>
+                  </select>
+                </label>
+
+                <label>
+                  Preferred Learning Mode
+                  <select name="learning_mode" required>
+                    <option value="">Select mode</option>
+                    <option value="Online">Online</option>
+                    <option value="Physical in Abuja">Physical in Abuja</option>
+                  </select>
+                </label>
+              </div>
+
+              {/* Preferred class time */}
+              <label>
+                Preferred Class Time
+                <select name="preferred_time">
+                  <option value="">Select a preferred time</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Flexible">I'm flexible</option>
+                </select>
+              </label>
+
+              {/* Message */}
+              <label>
+                Tell us about your goal
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="For example: I want to learn Mandarin for business, travel, studying in China, communicating with Chinese clients, or personal development..."
+                  required
+                />
+              </label>
+
+              {/* Submit */}
+              <button
+                className="btn primary full"
+                type="submit"
+              >
+                Request Consultation
+                <ArrowRight size={18} />
+              </button>
+
+              <small className="form-note">
+                Your information is kept private and will only be used to respond
+                to your enquiry.
+              </small>
             </form>
           </div>
         </section>
 
         <section id="faq" className="section-pad faq-section">
           <div className="shell faq-grid">
-            <div><div className="eyebrow soft">Questions, answered</div><h2>Everything you need to know <span>before you begin.</span></h2><p>Still unsure which program fits? Start with a consultation and we can guide you.</p><button className="btn secondary" onClick={() => scrollTo('booking')}>Talk to SpeakMandarinNG <MessageCircle size={17}/></button></div>
-            <div className="faq-list">{faqs.map(([q,a], i) => <div className={faqOpen === i ? 'faq-item open' : 'faq-item'} key={q}><button onClick={() => setFaqOpen(faqOpen === i ? -1 : i)}><span>{q}</span><ChevronDown size={18}/></button>{faqOpen === i && <p>{a}</p>}</div>)}</div>
+            <div><div className="eyebrow soft">Questions, answered</div><h2>Everything you need to know <span>before you begin.</span></h2><p>Still unsure which program fits? Start with a consultation and we can guide you.</p><button className="btn secondary" onClick={() => scrollTo('booking')}>Talk to SpeakMandarinNG <MessageCircle size={17} /></button></div>
+            <div className="faq-list">{faqs.map(([q, a], i) => <div className={faqOpen === i ? 'faq-item open' : 'faq-item'} key={q}><button onClick={() => setFaqOpen(faqOpen === i ? -1 : i)}><span>{q}</span><ChevronDown size={18} /></button>{faqOpen === i && <p>{a}</p>}</div>)}</div>
           </div>
         </section>
 
         <section className="final-cta">
-          <div className="shell final-inner"><div><div className="eyebrow">Your Mandarin journey starts here</div><h2>Learn the language. Build the connection.</h2></div><button className="btn light" onClick={() => scrollTo('booking')}>Book a Class <ArrowRight size={18}/></button></div>
+          <div className="shell final-inner"><div><div className="eyebrow">Your Mandarin journey starts here</div><h2>Learn the language. Build the connection.</h2></div><button className="btn light" onClick={() => scrollTo('booking')}>Book a Class <ArrowRight size={18} /></button></div>
         </section>
       </main>
 
       <footer className="footer">
         <div className="shell footer-grid">
-          <div><div className="brand footer-brand"><span className="brand-mark"><Languages size={21}/></span><span><strong>SpeakMandarinNG</strong><small>Mandarin Language Academy</small></span></div><p>Empowering Africans to learn Mandarin, connect with China and succeed globally.</p></div>
+          <div><div className="brand footer-brand"><span className="brand-mark"><Languages size={21} /></span><span><strong>SpeakMandarinNG</strong><small>Mandarin Language Academy</small></span></div><p>Empowering Africans to learn Mandarin, connect with China and succeed globally.</p></div>
           <div><h4>Explore</h4><button onClick={() => scrollTo('programs')}>Programs</button><button onClick={() => scrollTo('about')}>About</button><button onClick={() => scrollTo('faq')}>FAQs</button></div>
           <div><h4>Learn</h4><button onClick={() => scrollTo('programs')}>HSK Preparation</button><button onClick={() => scrollTo('programs')}>Business Mandarin</button><button onClick={() => scrollTo('programs')}>Kids & Teens</button></div>
           <div><h4>Contact</h4><a href="tel:+2348130229168">+234 813 022 9168</a><span>Abuja, Nigeria</span><a href="https://instagram.com/SpeakMandarinNg" target="_blank" rel="noreferrer">Instagram @SpeakMandarinNg</a></div>
